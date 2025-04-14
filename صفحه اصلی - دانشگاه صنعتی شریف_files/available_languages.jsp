@@ -1,0 +1,2 @@
+/*1732178370000*/
+AUI.add("portal-available-languages",function(A){var available={};var direction={};available["fa_IR"]="Persian (Iran)";direction["fa_IR"]="rtl";available["en_US"]="English (United States)";direction["en_US"]="ltr";available["ar_SA"]="Arabic (Saudi Arabia)";direction["ar_SA"]="rtl";available["tr_TR"]="Turkish (Turkey)";direction["tr_TR"]="ltr";available["ru_RU"]="Russian (Russia)";direction["ru_RU"]="ltr";Liferay.Language.available=available;Liferay.Language.direction=direction},"",{requires:[]});

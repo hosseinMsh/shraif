@@ -1,0 +1,2 @@
+/*1731490146000*/
+AUI().ready(function(){});Liferay.Portlet.ready(function(_portletId,_node){});Liferay.on("allPortletsReady",function(){});
