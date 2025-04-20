@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8" />
-    <title>Hacked Portal</title>
+    <title>پورتال مشکوک - Suspicious Portal</title>
     <style>
         body {
             background: black;
@@ -84,39 +84,68 @@
             width: 100%; height: 100%;
             background: white;
             color: black;
-            font-size: 2em;
+            font-size: 1.8em;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 10;
             display: none;
+            padding: 20px;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .en {
+            margin-top: 15px;
+            color: #aaa;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 <div class="scanlines"></div>
 <div class="container">
-    <h1>!!! HACKED !!!</h1>
+    <h1>!!! هک شدی !!!<br>!!! YOU GOT HACKED !!!</h1>
     <div id="typed-text"></div>
     <div class="warning">
-        To restore your files, officially drop out of school.
+        دامنه‌ای که باز کردی مشکوکه!
+        <br>آیا مطمئنی این همون <strong>sharif.ir</strong>ـه؟
+        <br><span style="color: yellow">شاید باشه: <strong>shraif.ir</strong> 😬</span>
+        <br><br>قبل از وارد کردن اطلاعات، همیشه دامنه رو چک کن!
+        <div class="en">
+            This domain looks suspicious!
+            <br>Are you sure it's really <strong>sharif.ir</strong>?
+            <br><span style="color: yellow">Could be: <strong>shraif.ir</strong> 😬</span>
+            <br><br>Always double-check the domain before entering your info!
+        </div>
     </div>
-    <button class="glitch-btn" onclick="alert('Too late...')">DROP OUT NOW</button>
+    <button class="glitch-btn" onclick="alert('مراقب باش... Always check the URL!')">باشه حواسم هست / Got it!</button>
 </div>
 
-<div class="reveal" id="reveal">😂 Just Kidding! Your files are safe.</div>
+<div class="reveal" id="reveal">
+    😂 شوخی بود! ولی واقعا حواست باشه به دامنه‌ها!
+    <div class="en">😂 Just kidding! But seriously, watch out for fake domains!</div>
+</div>
 
 <audio autoplay loop id="scary-audio">
     <source src="https://www.myinstants.com/media/sounds/the-ghost.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-    const text = `Your system has been breached.
-All student data is now in our control.
+    const text = `شما وارد یک پورتال مشکوک شدید.
+آیا مطمئنید این همون دامنهٔ اصلیه؟
 
-This is your only chance to undo the damage.
+گاهی فقط یک حرف کافیه برای افتادن در دام...
 
-Are you ready to make the sacrifice?`;
+دامنه‌های جعلی منتظر حواس‌پرتی شما هستن!
+
+---
+You have entered a suspicious portal.
+Are you sure this is the real domain?
+
+Sometimes a single letter is enough to trap you...
+
+Fake domains are waiting for your moment of distraction!`;
 
     const el = document.getElementById("typed-text");
     const reveal = document.getElementById("reveal");
@@ -127,7 +156,7 @@ Are you ready to make the sacrifice?`;
         if (i < text.length) {
             el.innerHTML += text.charAt(i);
             i++;
-            setTimeout(type, 50);
+            setTimeout(type, 40);
         }
     }
 
@@ -138,7 +167,7 @@ Are you ready to make the sacrifice?`;
 
     window.onload = () => {
         type();
-        setTimeout(showReveal, 30000); // بعد از 12 ثانیه شوخی رو نشون بده
+        setTimeout(showReveal, 20000);
     };
 </script>
 </body>
