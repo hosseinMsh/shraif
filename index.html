@@ -1,174 +1,63 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <title>پورتال مشکوک - Suspicious Portal</title>
-    <style>
-        body {
-            background: black;
-            color: lime;
-            font-family: 'Courier New', monospace;
-            margin: 0;
-            height: 100vh;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shraif.ir؟ نه عزیز :)</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Vazirmatn", sans-serif;
+      background-color: #fefefe;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
 
-        .scanlines {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: repeating-linear-gradient(
-                    to bottom,
-                    rgba(0, 0, 0, 0.1),
-                    rgba(0, 0, 0, 0.1) 2px,
-                    transparent 2px,
-                    transparent 4px
-            );
-            pointer-events: none;
-            z-index: 2;
-        }
+    h1 {
+      font-size: 2.5rem;
+      color: #d32f2f;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-        }
+    p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
 
-        h1 {
-            font-size: 3em;
-            color: red;
-            text-shadow: 0 0 10px red;
-        }
+    a.button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      background-color: #1976d2;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
 
-        #typed-text {
-            white-space: pre-wrap;
-            font-size: 1.2em;
-            max-width: 600px;
-            margin-top: 20px;
-        }
+    a.button:hover {
+      background-color: #1565c0;
+    }
 
-        .warning {
-            background-color: darkred;
-            color: white;
-            padding: 15px;
-            font-weight: bold;
-            margin-top: 30px;
-            border: 2px solid red;
-        }
+    .emoji {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
 
-        .glitch-btn {
-            margin-top: 30px;
-            background: red;
-            color: white;
-            font-size: 1.5em;
-            border: none;
-            padding: 15px 30px;
-            cursor: pointer;
-            animation: blink 1s infinite alternate;
-            box-shadow: 0 0 10px red;
-        }
-
-        @keyframes blink {
-            from { opacity: 1; }
-            to { opacity: 0.4; }
-        }
-
-        .reveal {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: white;
-            color: black;
-            font-size: 1.8em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-            display: none;
-            padding: 20px;
-            text-align: center;
-            flex-direction: column;
-        }
-
-        .en {
-            margin-top: 15px;
-            color: #aaa;
-            font-size: 0.9em;
-        }
-    </style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+  </style>
 </head>
 <body>
-<div class="scanlines"></div>
-<div class="container">
-    <h1>!!! هک شدی !!!<br>!!! YOU GOT HACKED !!!</h1>
-    <div id="typed-text"></div>
-    <div class="warning">
-        دامنه‌ای که باز کردی مشکوکه!
-        <br>آیا مطمئنی این همون <strong>sharif.ir</strong>ـه؟
-        <br><span style="color: yellow">شاید باشه: <strong>shraif.ir</strong> 😬</span>
-        <br><br>قبل از وارد کردن اطلاعات، همیشه دامنه رو چک کن!
-        <div class="en">
-            This domain looks suspicious!
-            <br>Are you sure it's really <strong>sharif.ir</strong>?
-            <br><span style="color: yellow">Could be: <strong>shraif.ir</strong> 😬</span>
-            <br><br>Always double-check the domain before entering your info!
-        </div>
-    </div>
-    <button class="glitch-btn" onclick="alert('مراقب باش... Always check the URL!')">باشه حواسم هست / Got it!</button>
-</div>
-
-<div class="reveal" id="reveal">
-    😂 شوخی بود! ولی واقعا حواست باشه به دامنه‌ها!
-    <div class="en">😂 Just kidding! But seriously, watch out for fake domains!</div>
-</div>
-
-<audio autoplay loop id="scary-audio">
-    <source src="https://www.myinstants.com/media/sounds/the-ghost.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-    const text = `شما وارد یک پورتال مشکوک شدید.
-آیا مطمئنید این همون دامنهٔ اصلیه؟
-
-گاهی فقط یک حرف کافیه برای افتادن در دام...
-
-دامنه‌های جعلی منتظر حواس‌پرتی شما هستن!
-
----
-You have entered a suspicious portal.
-Are you sure this is the real domain?
-
-Sometimes a single letter is enough to trap you...
-
-Fake domains are waiting for your moment of distraction!`;
-
-    const el = document.getElementById("typed-text");
-    const reveal = document.getElementById("reveal");
-    const audio = document.getElementById("scary-audio");
-    let i = 0;
-
-    function type() {
-        if (i < text.length) {
-            el.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, 40);
-        }
-    }
-
-    function showReveal() {
-        audio.pause();
-        reveal.style.display = "flex";
-    }
-
-    window.onload = () => {
-        type();
-        setTimeout(showReveal, 20000);
-    };
-</script>
+  <div class="emoji">😅</div>
+  <h1>اوه! یه اشتباه تایپی کردی</h1>
+  <p>این سایت shraif.ir هست، ولی آدرس درست <strong>sharif.ir</strong> هست.</p>
+  <p>نترس، یه دکمه گذاشتیم که کمکت کنه 😄</p>
+  <a class="button" href="https://sharif.ir">برو به سایت اصلی شریف</a>
 </body>
 </html>
